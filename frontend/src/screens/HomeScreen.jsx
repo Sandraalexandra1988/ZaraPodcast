@@ -3,6 +3,7 @@ import { Row, Col} from 'react-bootstrap';
 //import products from '../products.js'
 import Podcast from '../components/Podcast.jsx';
 import fetchPodcasts from '../fetchPodcasts.jsx';
+import Searchbox from '../components/Searchbox.jsx';
 
 
 const HomeScreen = () => {
@@ -45,6 +46,7 @@ const HomeScreen = () => {
    
   return (
     <Row>
+        <Searchbox />
         { podcasts.map((podcast) => (
             <Col key={podcast.id.attributes["im:id"]} sm={12} md={6} lg={4} xl={3}>
                 <Podcast podcast={podcast} />
